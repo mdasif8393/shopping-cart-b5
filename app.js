@@ -49,3 +49,55 @@ iphoneMinusButton.addEventListener('click',()=>{
     totalInput.innerText = newTotal;
     
 })
+
+const casePlusButton = document.getElementById('case-plus-button');
+casePlusButton.addEventListener('click',()=>{
+    const casePriceInput = document.getElementById('case-price');
+    const casePrice = parseFloat(casePriceInput.innerText);
+
+    const caseQuantityInput = document.getElementById('case-quantity-input');
+    const caseQuantity = parseFloat(caseQuantityInput.value);
+
+    const newCaseQuantity = caseQuantity + 1;
+    caseQuantityInput.value = newCaseQuantity;
+
+    const newCasePrice = 59 * newCaseQuantity;
+    casePriceInput.innerText = newCasePrice;
+
+    const subTotalInput = document.getElementById('subtotal');
+    const subTotal = parseFloat(subTotalInput.innerText);
+    const newSubTotal = subTotal + 59;
+    subTotalInput.innerText = newSubTotal;
+
+    const totalInput = document.getElementById('total');
+    const total = parseFloat(totalInput.innerText);
+    const newTotal = total + 59;
+    totalInput.innerText = newTotal;
+    
+})
+
+const caseMinusButton = document.getElementById('case-minus-button');
+caseMinusButton.addEventListener('click',()=>{
+    const casePriceInput = document.getElementById('case-price');
+    const casePrice = parseFloat(casePriceInput.innerText);
+
+    const caseQuantityInput = document.getElementById('case-quantity-input');
+    const caseQuantity = parseFloat(caseQuantityInput.value);
+
+    const newCaseQuantity = caseQuantity - 1;
+    caseQuantityInput.value = newCaseQuantity;
+
+    const newCasePrice = 59 * newCaseQuantity;
+    casePriceInput.innerText = newCasePrice;
+
+    const subTotalInput = document.getElementById('subtotal');
+    const subTotal = parseFloat(subTotalInput.innerText);
+    const newSubTotal = subTotal - 59;
+    subTotalInput.innerText = newSubTotal;
+
+    const totalInput = document.getElementById('total');
+    const total = parseFloat(totalInput.innerText);
+    const newTotal = total - 59;
+    totalInput.innerText = newTotal;
+    
+})
